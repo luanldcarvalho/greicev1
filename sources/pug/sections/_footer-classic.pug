@@ -1,0 +1,31 @@
+footer.section.footer-classic#section-footer
+	.container
+		.row.justify-content-lg-between
+			.col-sm-6.col-lg-4.col-xl-3.text-center.text-sm-left.offset-bottom-30-sm-0.wow.fadeInLeft(data-wow-delay='.2s')
+				h5.title-1 Contacts
+				p.text-black
+					a(href="mailto:#") info@demolink.org
+				p.subtitle
+					a(href='tel:#') 1-300-123-1234
+				+logo.brand-logo-dark
+			.col-sm-6.col-lg-4.col-xl-4.text-center.text-sm-left.offset-bottom-30-sm-0
+				h5.title-2 Newsletter
+				p Leave your e-mail to receive the latest news.
+				form.rd-form.rd-form-2.campaign-mailform.rd-form-inline(data-form-output='form-output-global' action='https://templatermonster.createsend.com/t/j/s/zjjikd/' method='post')
+					.form-wrap
+						label.form-label(for='campaign-email') E-mail
+						input#campaign-email.form-input(type='email' name='cm-zjjikd-zjjikd' data-constraints='@Email @Required')
+					.form-button.box-center
+						button.button.button-primary(type='submit') Subscribe
+				ul.list.text-center.text-sm-left.text-lg-center
+					li: a(href="#")
+						span.icon.fa-facebook-f
+					li: a(href="#")
+						span.icon.fa-youtube-play
+					li: a(href="#")
+						span.icon.fa-instagram
+			.col-sm-6.col-lg-4.col-xl-3.text-center.text-sm-left.wow.fadeInRight(data-wow-delay='.2s')
+				h5.title-3 About Us
+				p Oversize provides the best clothes and underwear for plus-size women.
+				+rights
+		

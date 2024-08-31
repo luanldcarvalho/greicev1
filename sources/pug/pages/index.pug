@@ -1,0 +1,199 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+include ../components/_ui-posts
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'Home'
+
+block page
+
+	// Page Header
+	include ../sections/_header-aside
+
+	// Personalized Selection
+	section.section.section-main#section-main
+		.container-custom
+			.box-custom
+				h2.box-custom-title.wow.fadeInLeft(data-wow-delay='.2s') Personalized Selection of Women’s Clothes
+				h5.box-custom-subtitle.wow.fadeInLeft.text-black-light(data-wow-delay='.2s') Over 150 models of plus size
+				a(href='#', data-wow-delay='.2s').button.button-lg.button-primary.box-custom-link.wow.fadeInRight Shop Now
+				.media.wow.fadeInRight(data-wow-delay='.2s')
+					.left-inner
+						h5 5 mistakes <br>of choosing plus size clothes
+						a.text-black-light(href='#') read more
+					.right-inner
+						.media-box
+							+img('image-4-343x238')
+							a(href='https://youtu.be/nmtNs8b-3ZM' data-lightgallery='item')
+								.media-box-inner
+									span.icon.fa-play
+
+		span.big-text.text-bg +SIZE
+		.box-image
+			+png('image-1-371x1623')
+		.sidebar-custom
+			ul.list
+				li: a(href='#'):  span.icon.fa-facebook-f
+				li: a(href='#'):  span.icon.fa-youtube-play
+				li: a(href='#'):  span.icon.fa-instagram
+
+		#toggle-target.sidebar-custom-inner
+			h3.font-weight-bold Get in touch
+			// RD Mailform
+			form.rd-form.rd-mailform.rd-form-centered.offset-top-20(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+				.row.row-20
+					.col-12
+						.form-wrap
+							input#contact-name.form-input(type='text' name='name' data-constraints='@Required')
+							label.form-label(for='contact-name') Your Name
+					.col-12
+						.form-wrap
+							input#login-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+							label.form-label(for='login-email') E-mail
+					.col-12
+						.form-wrap
+							input#contact-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+							label.form-label(for='contact-phone') Phone
+					.col-12
+						.form-wrap
+							label.form-label(for='contact-message') Address
+							textarea#contact-message.form-input(name='address' data-constraints='@Required')
+					.col-12.text-center.offset-top-30
+						button.button.button-lg.button-primary(type='submit') Send
+
+	//One Size Does Not Fit All Your Needs
+	.section.section.section-lg.bg-gray-100.hidden#why-choose-us( data-type="anchor" )
+		.container
+			.box-custom-second
+				.left-inner.wow.fadeInLeft(data-wow-delay='.2s')
+					+jpg('image-3-290x290')
+				.box-image-2
+					+png('image-5-508x780')
+				.right-inner
+						h3.box-title.wow.fadeInRight(data-wow-delay='.2s') One Size Does Not Fit All Your Needs
+						p.box-subtitles.wow.fadeInRight.text-black-light(data-wow-delay='.2s') At Oversize, we try to avoid the limits set by modern society to help you look amazing and attractive all year round.
+						.box-info.wow.fadeInLeft(data-wow-delay='.2s')
+							span.icon.linearicons-bubble-text
+							h5.font-weight-medium You are convinced that...
+						p.text-black-light Your body needs to fit modern standards but we believe that any body is beautiful.
+						.box-info.offset-top-50.wow.fadeInLeft(data-wow-delay='.2s')
+							span.icon.linearicons-confused
+							h5.font-weight-medium You are forced to...
+						p.text-black-light Buy underwear and clothes that don’t fit your body while our shop has what you need.
+
+
+	//Our Gallery
+	section.section.section-gallery.section-lg#gallery( data-type="anchor" )
+		.container
+			.box-custom-gallery
+				h2.box-custom-title.wow.fadeInLeft(data-wow-delay='.2s') Our Gallery
+					span.big-text.text-bg-2 WORKS
+				h5.text-black-light.box-custom-subtitle.wow.fadeInLeft(data-wow-delay='.2s') Here you can take a look at our latest models of plus size clothes for women designed by Oversize.
+				a(href='#', data-wow-delay='.2s').button.button-lg.button-primary.box-custom-link.wow.fadeInRight View more
+				.box-img-animate
+					.box-img-animate-item.box-1(data-parallax-scroll='{"y": 0, "x": 100,  "smoothness": 50 }')
+						img(src="images/gallery-01-326x166.jpg",  alt="")
+					.box-img-animate-item.box-2(data-parallax-scroll='{"y": 150, "x": 0,  "smoothness": 50 }')
+						img(src="images/gallery-02-326x421.jpg",  alt="")
+					.box-img-animate-item.box-3(data-parallax-scroll='{"y":70, "x": -150,  "smoothness": 50 }')
+						img(src="images/gallery-3-222x300.jpg",  alt="")
+					.box-img-animate-item.box-4(data-parallax-scroll='{"y":20, "x": 20,  "smoothness": 50 }')
+						img(src="images/gallery-4-401x256.jpg",  alt="")
+					.box-img-animate-item.box-5(data-parallax-scroll='{"y":60, "x": 70,  "smoothness": 50 }')
+						img(src="images/gallery-5-222x185.jpg",  alt="")
+
+	//Why do Women Choose Oversize Clothes?
+	section.section.section-sm.hidden.bg-default#women-choose( data-type="anchor" )
+		.container
+			.box-custom-video
+				.left-inner
+					.box.wow.fadeInLeft(data-wow-delay='.2s')
+						.media
+							span.icon.linearicons-crown
+						.text
+							h5 Individual Approach
+							p.text-black-light Oversize is known for its unique approach to designing clothes for its customers.
+					.box.wow.fadeInLeft(data-wow-delay='.2s')
+						.media
+							span.icon.linearicons-bag2
+						.text
+							h5 A Wide Product Range
+							p.text-black-light We provide a wide variety of plus-size underwear and clothes to our clients.
+					.box.wow.fadeInLeft(data-wow-delay='.2s')
+						.media
+							span.icon.linearicons-tags
+						.text
+							h5 Affordable Prices
+							p.text-black-light All our clothes are provided at great prices with regular discounts.
+				.right-inner
+					h3.font-weight-bold.wow.fadeInRight(data-wow-delay='.2s') Why do Women Choose<br> Oversize Clothes?
+					p.wow.fadeInRight(data-wow-delay='.2s') We offer women a variety of benefits besides our clothes<br> and underwear. Watch this video to know more.
+					.media-box.wow.fadeInRight(data-wow-delay='.2s')
+						+img('image-6-667x356')
+						a(href='https://youtu.be/qCw_al2oRJY' data-lightgallery='item')
+							.media-box-inner
+								span.icon.fa-play
+					.box-review
+						.media
+							+img('image-7-80x80')
+						.text
+							h4.font-weight-light.text-black-light Our main goal is to offer great clothes designed for various body sizes and types.
+							h5.font-weight-medium Samantha Johns
+								span Founder
+				.box-image-3
+					+png('image-8-452x919')
+
+	//Testimonials
+	section.section.section-md.bg-secondary#testimonials( data-type="anchor" )
+		.container
+			h3.font-weight-sbold.text-center.fadeInRight(data-wow-delay='.2s') Testimonials
+			.row.row-50.row-narrow.justify-content-center
+				.col-sm-9.col-md-6.col-lg-5.col-xl-4.wow.fadeInLeft(data-wow-delay='0s')
+					+post-creative({
+						mod: 'post-creative',
+						imgUser: 'testimonials-01-310x246',
+						text: "Unlike other plus size vendors, I've noticed that you really listen to your customers.",
+						img: 'post-16-370x267',
+						autor: 'Susan Boyle'
+					})
+				.col-sm-9.col-md-6.col-lg-5.col-xl-4.wow.fadeInLeft(data-wow-delay='.1s')
+					+post-creative({
+						mod: 'post-creative',
+						imgUser: 'testimonials-02-310x246',
+						text:"I like your recent range of plus size dresses. Your products look great and suit me.",
+						img: 'post-17-370x267',
+						autor: 'Ann Smith'
+					})
+				.col-sm-9.col-md-6.col-lg-5.col-xl-4.wow.fadeInLeft(data-wow-delay='.2s')
+					+post-creative({
+						mod: 'post-creative',
+						imgUser: 'testimonials-03-310x246',
+						text:"I’m really amazed by the quality of customer service you offer. Thank you for what you do!",
+						img: 'post-18-370x267',
+						autor: 'Kate Williams'
+					})
+				.col-12.text-center
+					a(href='#', data-wow-delay='.2s').button.button-lg.button-primary.wow.fadeInRight Send your review
+
+	// Hello! I am Samantha Johns
+	section.section.section-lg.bg-default.section-info.hidden
+		.container
+			.row.row-50
+				.col-12.col-md-6.left-inner
+					h3.title.font-weight-bold.wow.fadeInRight(data-wow-delay='.2s') Hello! I am Samantha Johns
+					h5.subtitle.text-black-light.wow.fadeInLeft(data-wow-delay='.2s') Founder of "Oversize"
+					p.text.text-black-light.wow.fadeInLeft(data-wow-delay='.2s') For quite a long time I’ve been suffering from being unable to pick the clothes I like. Everything needed to be custom-made. That’s how Oversize appeared.
+					p.text.text-black-light.wow.fadeInLeft(data-wow-delay='.2s') Here we make sure that every woman can afford the best plus-size clothes without altering them to their body size. We can do it all for you quicker than anyone else.
+					.text-center.text-sm-left
+						a(href='#', data-wow-delay='.2s').button.button-lg.button-primary.link.wow.fadeInLeft Contact us
+				.col-12.col-md-6.right-inner
+					div.wow.fadeInUp(data-wow-delay='.2s')
+						h4.font-weight-light.title I know how hard it can be to find proper plus-size clothes that fit your personal image & lifestyle.
+				.box-image-4
+					+png('image-9-452x919')
+
+	// Page Footer
+	include ../sections/_footer-classic

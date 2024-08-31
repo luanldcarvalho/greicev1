@@ -1,0 +1,58 @@
+header.section.page-header.header-absolute
+	// RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-aside(
+			data-layout=                'rd-navbar-fixed'
+			data-sm-layout=             'rd-navbar-fixed'
+
+			data-md-layout=             'rd-navbar-fixed'
+			data-md-device-layout=      'rd-navbar-fixed'
+
+			data-lg-layout=             'rd-navbar-static'
+			data-lg-device-layout=      'rd-navbar-fixed'
+			data-lg-stick-up-offset=    '46px'
+			data-lg-stick-up=           'true'
+
+			data-xl-layout=             'rd-navbar-static'
+			data-xl-device-layout=      'rd-navbar-fixed'
+			data-xl-stick-up-offset=    '46px'
+			data-xl-stick-up=           'true'
+
+			data-xxl-stick-up-offset=   '46px'
+			data-xxl-stick-up=          'true'
+		)
+			.rd-navbar-collapse-toggle.rd-navbar-fixed-element-1(data-rd-navbar-toggle='.rd-navbar-collapse'): span
+			.rd-navbar-collapse
+				ul.list.rd-navbar-list
+					li: a.icon.icon-sm.icon-bordered.link-default.mdi.mdi-facebook(href="#")
+					li: a.icon.icon-sm.icon-bordered.link-default.mdi.mdi-youtube-play(href="#")
+					li: a.icon.icon-sm.icon-bordered.link-default.mdi.mdi-instagram(href="#")
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					// RD Navbar Panel
+					.rd-navbar-panel
+						// RD Navbar Toggle
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+						// RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+						.mt-toggle-wrapper
+							button.mt-toggle( data-multitoggle=".sidebar-custom-inner" data-scope=".sidebar-custom-inner"): span
+					.rd-navbar-nav-wrap.rd-navbar-navigation
+						include ../includes/_navigation
+						.rd-navbar-call
+							a(href='tel:#')
+								svg(width='22', height='23', viewBox='0 0 22 23',  xmlns='http://www.w3.org/2000/svg')
+									g(filter='url(#filter0_d)')
+										path(d='M16.25 17H5.75V3H16.25V17ZM13 20H9V19H13V20ZM15 0H7C6.20435 0 5.44129 0.31607 4.87868 0.87868C4.31607 1.44129 4 2.20435 4 3V19C4 19.7956 4.31607 20.5587 4.87868 21.1213C5.44129 21.6839 6.20435 22 7 22H15C15.7956 22 16.5587 21.6839 17.1213 21.1213C17.6839 20.5587 18 19.7956 18 19V3C18 2.20435 17.6839 1.44129 17.1213 0.87868C16.5587 0.31607 15.7956 0 15 0V0Z')
+									defs
+										filter#filter0_d(x='0', y='0', width='22', height='30', filterUnits='userSpaceOnUse', color-interpolation-filters='sRGB')
+											feflood(flood-opacity='0', result='BackgroundImageFix')
+											fecolormatrix(in='SourceAlpha', type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0')
+											feoffset(dy='4')
+											fegaussianblur(stdDeviation='2')
+											fecolormatrix(type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0')
+											feblend(mode='normal', in2='BackgroundImageFix', result='effect1_dropShadow')
+											feblend(mode='normal', in='SourceGraphic', in2='effect1_dropShadow', result='shape')
+								span.text 1-800-123-1234
+

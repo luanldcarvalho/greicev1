@@ -1,0 +1,11 @@
+mixin post-creative(obj)
+	// Post Creative
+	article.post.post-creative(class=obj.mod)
+		.post-creative-figure
+			+jpg(obj.imgUser, 'img-circles')
+		.post-creative-body
+			span.icon.linearicons-quote-open
+			p.text-black-light=obj.text
+		.post-creative-footer
+			h5.post-creative-autor=obj.autor
+			span.icon.fa-instagram 

@@ -1,0 +1,167 @@
+/*
+*
+* RD Navbar Aside
+*/
+
+.rd-navbar-aside {
+	display: block;
+
+	// Static
+	&.rd-navbar-static {
+		background: transparent;
+
+		.rd-navbar-collapse {
+			display: none;
+		}
+
+		.rd-navbar-main {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 10px;
+			@include media-breakpoint-up(xl) {
+				padding-left: 80px;
+			}
+		}
+
+		.rd-navbar-panel {
+			display: flex;
+			align-items: center;
+		}
+
+		.rd-navbar-brand {
+			display: block;
+			@include media-breakpoint-up(xl) {
+				margin-right: 16px;
+			}
+			@include media-breakpoint-up(xxl) {
+				margin-right: 125px;
+			}
+		}
+
+		.rd-navbar-nav {
+			padding: 25px 20px;
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
+			background: $primary;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				height: 100%;
+				transform: translateX(-50%);
+				width: 0;
+				background-color: inherit;
+				transition: inherit;
+				@include media-breakpoint-up(lg) {
+					padding: 25px 62px;
+				}
+				@media screen and (min-width: 2565px) {
+					left: 33%;
+				}
+			}
+		}
+
+		.rd-nav-link {
+			font-size: 16px;
+			color: $white;
+
+			&:hover {
+				color: $black;
+			}
+		}
+
+		// RD Nav item 1-st level
+		.rd-nav-item {
+			display: inline-block;
+
+
+			> .rd-navbar-submenu-toggle {
+				color: $white;
+			}
+
+			&.focus,
+			&.opened {
+				.rd-nav-link {
+					color: rgba($white, .5);
+				}
+
+				> .rd-navbar-submenu-toggle {
+					color: rgba($white, .5);
+				}
+			}
+
+			&.active {
+				.rd-nav-link {
+					color: $black;
+				}
+
+				> .rd-navbar-submenu-toggle {
+					color: rgba($white, .5);
+				}
+			}
+		}
+
+
+
+		// Mega large ≥1600px
+		@include media-breakpoint-up(xxl) {
+			.rd-navbar-nav {
+				padding-top: 32px;
+				padding-bottom: 32px;
+				padding-right: 4px;
+
+			}
+		}
+
+		// RD Navbar Stuck || Clone
+		&.rd-navbar--is-stuck,
+		&.rd-navbar--is-clone {
+
+			.rd-navbar-nav {
+				padding-top: 24px;
+				padding-bottom: 24px;
+				padding-left: 178px;
+				@include media-breakpoint-up(xl) {
+					padding-left: 194px;
+				}
+				@include media-breakpoint-up(xxl) {
+					padding-left: 160px;
+				}
+				&:before {
+					width: 100vw;
+				}
+			}
+		}
+	}
+}
+.rd-navbar-navigation {
+	display: flex;
+	align-items: center;
+	background: $primary;
+	@include media-breakpoint-up(xl) {
+		padding-right: 16px;
+	}
+}
+
+.rd-navbar--is-stuck {
+	.mt-toggle-wrapper {
+		top: 15px;
+	}
+	.mt-toggle span:after, .mt-toggle span:before, .mt-toggle span {
+		background-color: $white;
+	}
+	.rd-navbar-brand {
+		margin-right: 40px;
+		@include media-breakpoint-up(lg) {
+			margin-right: 0;
+		}
+	}
+}
+
+.rd-navbar--is-stuck .mt-toggle.active span {
+	background: transparent;
+}

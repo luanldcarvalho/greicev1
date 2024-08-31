@@ -1,0 +1,93 @@
+/*
+* Footers
+*/
+
+//
+// Footer Classic
+//
+
+.footer-classic {
+	padding: 60px 0;
+	background: $gray-100;
+	a {
+		color: $black;
+		&:hover {
+			color: $primary;
+		}
+	}
+	@include media-breakpoint-up(sm) {
+		padding-top: 80px;
+		padding-bottom: 70px;
+	}
+	@include media-breakpoint-up(lg) {
+		padding-top: 100px;
+		padding-bottom: 75px;
+	}
+	.title-1, .title-2, .title-3 {
+		font-weight: 600;
+		position: relative;
+		padding-left: 12px;
+		display: inline-block;
+		&:after {
+			content: 'C';
+			position: absolute;
+			top: -74%;
+			left: 0;
+			font-size: 50px;
+			font-weight: 900;
+			color: rgba(0, 0, 0, 0.06);
+			@include media-breakpoint-up(sm) {
+				display: block;
+			}
+		}
+	}
+	.title-2 {
+		&:after {
+			content: 'N';
+			left: -3%;
+			@include media-breakpoint-up(sm) {
+				left: -3%;
+			}
+		}
+	}
+	.title-3 {
+		&:after {
+			content: 'A';
+			left: -3%;
+		}
+	}
+	.subtitle {
+		padding-bottom: 50px;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 80px;
+		}
+	}
+	form {
+		padding-bottom: 52px;
+	}
+	.list {
+		text-align: left;
+		@include media-breakpoint-up(lg) {
+			text-align: center;
+		}
+		li {
+			display: inline-block;
+			margin: 0 10px;
+			.icon {
+				font-size: 20px;
+				color: rgba(0, 0, 0, 0.7);
+				transition: .3s ease-in-out;
+				&:hover {
+					color: $primary;
+					transition: .3s ease-in-out;
+				}
+			}
+		}
+	}
+	.brand .brand-logo-dark {
+		display: block;
+	}
+	.brand .brand-logo-light {
+		display: none;
+	}
+}

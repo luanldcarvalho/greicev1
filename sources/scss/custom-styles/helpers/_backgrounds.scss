@@ -1,0 +1,117 @@
+/*
+* Backgrounds
+*/
+
+.context-dark {
+	@extend %context-dark;
+}
+
+%context-dark {
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: none;
+		}
+
+		.brand-logo-light {
+			display: block;
+		}
+	}
+}
+
+%context-light {
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: block;
+		}
+
+		.brand-logo-light {
+			display: none;
+		}
+	}
+}
+
+/*
+* Light Backgrounds
+*/
+.bg-default {
+	@include bg-behaviour($body-bg);
+}
+
+.bg-secondary {
+	@include bg-behaviour($secondary);
+}
+
+.bg-gray-100 {
+	@include bg-behaviour($gray-100);
+}
+
+.bg-gray-secondary {
+	@include bg-behaviour($secondary);
+}
+
+/*
+* Dark Backgrounds
+*/
+.bg-gray-700 {
+	@extend %context-dark;
+	@include bg-behaviour($gray-700);
+}
+
+/*
+* Accent Backgrounds
+*/
+.bg-primary {
+	@extend %context-dark;
+	& + & {
+		padding-top: 0;
+	}
+}
+
+/*
+* Background Image
+*/
+.bg-image {
+
+}
+
+[class^='bg-'] {
+	background-size: cover;
+	background-position: center center;
+}
+
+// Desktop only
+//
+html:not(.tablet):not(.mobile) {
+	.bg-fixed {
+		@include media-breakpoint-up(lg) {
+			background-attachment: fixed;
+		}
+	}
+}
+
+.text-bg {
+	 display: none;
+	 position: absolute;
+	 z-index: 3;
+	 top: 44%;
+	 left: 48%;
+	 transform: translate(-48%, -44%);
+	 @include media-breakpoint-up(xxl) {
+		 display: block;
+	 }
+ }
+
+.text-bg-2 {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	top: 115%;
+	left: -24%;
+
+
+	@include media-breakpoint-up(xxl) {
+		display: block;
+	}
+}
